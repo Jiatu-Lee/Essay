@@ -2,11 +2,11 @@ $ touch fileName.txt
 $ git add fileName.txt
 $ git commit -m "wrote a file"
 
-#-mºóÃæÊäÈëµÄÊÇ±¾´ÎÌá½»µÄËµÃ÷£¬·½±ãÄã¾ÍÄÜ´ÓÀúÊ·¼ÇÂ¼Àï·½±ãµØÕÒµ½¸Ä¶¯¼ÇÂ¼¡£#
-commit¿ÉÒÔÒ»´ÎÌá½»ºÜ¶àÎÄ¼ş£¬±ÈÈç£º
+#-måé¢è¾“å…¥çš„æ˜¯æœ¬æ¬¡æäº¤çš„è¯´æ˜ï¼Œæ–¹ä¾¿ä½ å°±èƒ½ä»å†å²è®°å½•é‡Œæ–¹ä¾¿åœ°æ‰¾åˆ°æ”¹åŠ¨è®°å½•ã€‚#
+commitå¯ä»¥ä¸€æ¬¡æäº¤å¾ˆå¤šæ–‡ä»¶ï¼Œæ¯”å¦‚ï¼š
 $ git add file01.txt
 $ git add file02.txt file03.txt
 $ git commit -m "add 3 files."
 
 
-×Ü½á£ºtouchĞÂ½¨-> git addÌí¼Ó-> git commitÌá½»
+æ€»ç»“ï¼štouchæ–°å»º-> git addæ·»åŠ -> git commitæäº¤
