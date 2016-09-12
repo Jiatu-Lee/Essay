@@ -1,0 +1,7 @@
+地址：https://git-for-windows.github.io。
+下载的是exe文件，下载完成后安装即可。
+安装完成后，win->git->Git Bash
+最后一步设置，在Git Bash输入：
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+

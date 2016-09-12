@@ -1,0 +1,8 @@
+$ mkdir learngit
+$ cd learngit
+$ pwd
+
+#pwd命令用于显示当前目录#
+
+$ git init
+$ ls -ah

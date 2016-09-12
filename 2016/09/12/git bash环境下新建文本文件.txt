@@ -1,0 +1,12 @@
+$ touch fileName.txt
+$ git add fileName.txt
+$ git commit -m "wrote a file"
+
+#-m后面输入的是本次提交的说明，方便你就能从历史记录里方便地找到改动记录。#
+commit可以一次提交很多文件，比如：
+$ git add file01.txt
+$ git add file02.txt file03.txt
+$ git commit -m "add 3 files."
+
+
+总结：touch新建-> git add添加-> git commit提交
