@@ -1,0 +1,13 @@
+$ git status
+
+#
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   newFile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+#
+这条命令可以让我们时刻掌握仓库当前的状态，上面的命令告诉我们，newFile.txt被修改过了，但还没有准备提交的修改。
