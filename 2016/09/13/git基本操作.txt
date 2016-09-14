@@ -1,0 +1,42 @@
+git init
+用 git init 在目录中创建新的 Git 仓库。 你可以在任何时候、任何目录中这么做，完全是本地化的。 
+
+git clone 
+使用 git clone 拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改。
+
+git add 
+git add 命令可将该文件添加到缓存
+
+git status
+git status 命令用于查看项目的当前状态,以查看在你上次提交之后是否有修改。
+
+git diff
+执行 git diff 来查看执行 git status 的结果的详细信息。
+git diff 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。git diff 有两个主要的应用场景。
+尚未缓存的改动：git diff 
+查看已缓存的改动： git diff --cached 
+查看已缓存的与未缓存的所有改动：git diff HEAD 
+显示摘要而非整个 diff：git diff --stat 
+
+git status显示你上次提交更新至后所更改或者写入缓存的改动， 而 git diff 一行一行地显示这些改动具体是啥。
+
+如果你觉得 git add 提交缓存的流程太过繁琐，Git 也允许你用 -a 选项跳过这一步。命令格式如下：
+git commit -a
+
+如:
+$ git commit -am 'changes to hello file'2.
+[master 78b2670] changes to hello file3. 
+1 files changed, 2 insertions(+), 1 deletions(-)
+
+git reset HEAD
+git reset HEAD 命令用于取消缓存已缓存的内容。
+
+git rm 
+git rm 将文件从缓存区中移除。
+
+默认情况下，git rm file 会将文件从缓存区和你的硬盘中（工作目录）删除。 如果要在工作目录中留着该文件，可以使用命令：
+$ git rm --cached
+
+git mv
+git mv 命令做得所有事情就是 git rm --cached， 重命名磁盘上的文件，然后再执行 git add 把新文件添加到缓存区。
+

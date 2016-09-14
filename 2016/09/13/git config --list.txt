@@ -1,0 +1,22 @@
+要检查已有的配置信息，可以使用 git config --list 命令：
+有时候会看到重复的变量名，那就说明它们来自不同的配置文件（比如 /etc/gitconfig 和 ~/.gitconfig），不过最终 Git 实际采用的是最后一个。
+也可以直接查阅某个环境变量的设定，只要把特定的名字跟在后面即可。
+$ git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+http.sslcainfo=your address
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+filter.lfs.clean=git-lfs clean %f
+filter.lfs.smudge=git-lfs smudge %f
+filter.lfs.required=true
+user.name=your name
+user.email=email@example.com
+core.editor=Notepad++
+
