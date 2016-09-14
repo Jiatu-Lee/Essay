@@ -1,0 +1,49 @@
+1. 使用 <embed> 标签
+<embed> 标签的作用是在 HTML 页面中嵌入多媒体元素。
+<embed src="movie.swf" height="200" width="200"/>
+
+HTML4 无法识别 <embed> 标签。您的页面无法通过验证。 
+如果浏览器不支持 Flash，那么视频将无法播放 
+iPad 和 iPhone 不能显示 Flash 视频。 
+如果您将视频转换为其他格式，那么它仍然不能在所有浏览器中播放。 
+2. 使用 <object> 标签
+<object data="movie.swf" height="200" width="200"/>
+
+如果浏览器不支持 Flash，将无法播放视频。 
+iPad 和 iPhone 不能显示 Flash 视频。 
+如果您将视频转换为其他格式，那么它仍然不能在所有浏览器中播放。 
+3. 使用 <video> 标签
+<video width="320" height="240" controls="controls">
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.ogg" type="video/ogg" />
+  <source src="movie.webm" type="video/webm" />
+Your browser does not support the video tag.
+</video>
+
+您必须把视频转换为很多不同的格式。 
+<video> 元素在老式浏览器中无效。 
+<video> 元素无法通过 HTML 4 和 XHTML 验证。 
+4. 最好的 HTML 解决方法
+HTML 5 + <object> + <embed>
+
+<video width="320" height="240" controls="controls">
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.ogg" type="video/ogg" />
+  <source src="movie.webm" type="video/webm" />
+  <object data="movie.mp4" width="320" height="240">
+    <embed src="movie.swf" width="320" height="240" />
+  </object>
+</video>
+
+您必须把视频转换为很多不同的格式 
+<video> 元素无法通过 HTML 4 和 XHTML 验证。 
+<embed> 元素无法通过 HTML 4 和 XHTML 验证。 
+注释：使用 <!DOCTYPE html> (HTML5) 解决验证问题。
+5. 优酷解决方案
+<embed src="http://player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf" 
+width="480" height="400" 
+type="application/x-shockwave-flash">
+</embed>
+
+6. 使用超链接
+<a href="movie.swf">Play a video file</a>

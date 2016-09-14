@@ -1,0 +1,43 @@
+XHTML 定义了三种文件类型声明：
+1. XHTML 1.0 Strict （严格类型） 
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+在此情况下使用：需要干净的标记，避免表现上的混乱。请与层叠样式表配合使用。
+
+2. XHTML 1.0 Transitional （过渡类型） 
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+在此情况下使用：当需要利用 HTML 在表现上的特性时，并且当需要为那些不支持层叠样式表的浏览器编写 XHTML 时。
+
+3. XHTML 1.0 Frameset （框架类型）
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+在此的情况下使用：需要使用HTML框架将浏览器窗口分割为两部分或更多框架时。
+
+*使用最普遍的是 XHTML Transitional！*
+
+根据不同的文件类型声明，新式的浏览器对文档的处理方式也是不同的。
+如果浏览器读到一个文件类型声明，那么它会按照“恰当”的方式来处理文档。如果没有 DOCTYPE，文档也许会以截然不同的方式显示出来。
+
+Netscape 会误读 <br/> 标签，所以不要使用闭合标签来关闭 <br>，而是要在标签的末端添加 / >。
+
+推荐一个验证站点的转换工具：TIDY
+
+XHTML 文档是根据文档类型声明（DTD）进行验证的。只有将正确的 DTD 添加到文件的首行，XHTML 文件才会被正确地验证。
+严格 DTD 包含没有被反对使用的或不出现在框架结构中的元素和属性：
+!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+过渡 DTD 包含严格 DTD 中的一切，外加那些不赞成使用的元素和属性。
+
+!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+框架 DTD 包含过渡 DTD 中的一切，外加框架。
+
+!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"
