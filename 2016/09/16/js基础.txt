@@ -1,0 +1,40 @@
+js必须位于 <script> 与 </script> 标签之间。脚本可被放置在 HTML 页面的 <body> 和 <head> 部分中。
+
+如需在 HTML 页面中插入 JavaScript，请使用 <script> 标签。<script> 和 </script> 会告诉 JavaScript 在何处开始和结束。
+<script> 和 </script> 之间的代码行包含了 JavaScript。
+那些老旧的实例可能会在 <script> 标签中使用 type="text/javascript"。现在已经不必这样做了。
+
+通常把函数放入 <head> 部分中，或者放在页面底部。这样就可以把它们安置到同一处位置，不会干扰页面的内容。
+
+如需使用外部文件，需要在 <script> 标签的 "src" 属性中设置该 .js 文件，但外部脚本不能包含 <script> 标签。
+
+如需从 JavaScript 访问某个 HTML 元素，可以使用 document.getElementById(id) 方法。同时使用 "id" 属性来标识 HTML 元素。
+
+使用 document.write() 仅仅向文档输出写内容。如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。
+
+分号用于分隔 JavaScript 语句。通常我们在每条可执行的语句结尾添加分号。使用分号的另一用处是在一行中编写多条语句，不过分号是可选的。
+
+JavaScript 对大小写是敏感的。
+
+JavaScript 会忽略多余的空格。
+
+JavaScript 中的所有事物都是对象：字符串、数字、数组、日期，等等。
+在 JavaScript 中，对象是拥有属性和方法的数据。
+
+函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。
+
+JavaScript 变量的生命期从它们被声明的时间开始。局部变量会在函数运行以后被删除。全局变量会在页面关闭后被删除。如果把值赋给尚未声明的变量，该变量将被自动作为全局变量声明。
+
+==  等于
+=== 全等（值和类型） 
+
+For/In 循环
+JavaScript for/in 语句循环遍历对象的属性：
+实例
+var person={fname:"John",lname:"Doe",age:25};
+for (x in person)
+  {
+  txt=txt + person[x];
+  }
+
+JavaScript 支持标签

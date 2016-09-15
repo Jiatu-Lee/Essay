@@ -1,0 +1,6 @@
+绝不要使用在文档加载之后使用 document.write()，这会覆盖该文档。
+修改 HTML 内容的最简单的方法时使用 innerHTML 属性。
+document.getElementById(id).innerHTML=new HTML。
+
+改变 HTML 元素的属性:
+document.getElementById(id).attribute=new value。
