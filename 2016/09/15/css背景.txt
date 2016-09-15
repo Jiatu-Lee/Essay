@@ -1,0 +1,59 @@
+﻿1. 背景色
+可以使用 background-color 属性为元素设置背景色。这个属性接受任何合法的颜色值。
+background-color 不能继承，其默认值是 transparent。transparent 有"透明"之意。
+也就是说，如果一个元素没有指定背景色，那么背景就是透明的，这样其祖先元素的背景才能可见。
+
+2. 背景图像
+要把图像放入背景，需要使用 background-image 属性。background-image 属性的默认值是 none，表示背景上没有放置任何图像。
+background-image 也不能继承。事实上，所有背景属性都不能继承。
+
+3. 背景重复
+如果需要在页面上对背景图像进行平铺，可以使用 background-repeat 属性。
+属性值 repeat 导致图像在水平垂直方向上都平铺，就像以往背景图像的通常做法一样。
+repeat-x 和 repeat-y 分别导致图像只在水平或垂直方向上重复，no-repeat 则不允许图像在任何方向上平铺。
+默认地，背景图像将从一个元素的左上角开始。
+
+4. 背景定位
+可以利用 background-position 属性改变图像在背景中的位置。
+为 background-position 属性提供值有很多方法。首先，可以使用一些关键字：top、bottom、left、right 和 center。通常，这些关键字会成对出现，不过也不总是这样。
+还可以使用长度值，如 100px 或 5cm，最后也可以使用百分数值。不同类型的值对于背景图像的放置稍有差异。
+
+位置关键字（属性background-position的值）：
+可以按任何顺序出现，只要保证不超过两个关键字 - 一个对应水平方向，另一个对应垂直方向。如果只出现一个关键字，则认为另一个关键字是 center。
+
+长度值：
+长度值解释的是元素内边距区左上角的偏移。偏移点是图像的左上角。
+这一点与百分数值不同，因为偏移只是从一个左上角到另一个左上角。也就是说，图像的左上角与 background-position 声明中的指定的点对齐。
+
+百分数值：
+百分数值同时应用于元素和图像。也就是说，图像中描述为 50% 50% 的点（中心点）与元素中描述为 50% 50% 的点（中心点）对齐。
+如果图像位于 0% 0%，其左上角将放在元素内边距区的左上角。如果图像位置是 100% 100%，会使图像的右下角放在右边距的右下角。
+如果只提供一个百分数值，所提供的这个值将用作水平值，垂直值将假设为 50%。这一点与关键字类似。
+background-position 的默认值是 0% 0%，在功能上相当于 top left。这就解释了背景图像为什么总是从元素内边距区的左上角开始平铺，除非设置了不同的位置值。
+
+5.背景关联
+如果文档比较长，那么当文档向下滚动时，背景图像也会随之滚动。当文档滚动到超过图像的位置时，图像就会消失。
+您可以通过 background-attachment 属性防止这种滚动。通过这个属性，可以声明图像相对于可视区是固定的（fixed），因此不会受到滚动的影响。
+background-attachment 属性的默认值是 scroll，也就是说，在默认的情况下，背景会随文档滚动。
+
+6. 所有背景属性在一个声明之中 
+<style type="text/css">
+body
+{ 
+background: #ff0000 url(../i/eg_bg_03.gif) no-repeat fixed center; 
+}
+</style>
+
+一般的：
+background-repeat: no-repeat;
+background-attachment:fixed;
+background-position: ?% ?%; 
+这三条要一起声明才能够达到想要的效果。
+
+小结：
+background 简写属性，作用是将背景属性设置在一个声明中。 
+background-attachment 背景图像是否固定或者随着页面的其余部分滚动。 
+background-color 设置元素的背景颜色。 
+background-image 把图像设置为背景。 
+background-position 设置背景图像的起始位置。 
+background-repeat 设置背景图像是否及如何重复。 

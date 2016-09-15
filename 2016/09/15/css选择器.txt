@@ -1,0 +1,1 @@
+不要在属性值与单位之间留有空格,它仅在 IE 6 中有效，但是在 Mozilla/Firefox 或 Netscape 中却无法正常工作。

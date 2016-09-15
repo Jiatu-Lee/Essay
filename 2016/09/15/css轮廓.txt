@@ -1,0 +1,4 @@
+outline 在一个声明中设置所有的轮廓属性。
+outline-color 设置轮廓的颜色。
+outline-style 设置轮廓的样式。
+outline-width 设置轮廓的宽度。
