@@ -1,0 +1,4 @@
+-ms-名称:值; /* IE 9 */
+-moz-名称:值; /* Firefox */
+-webkit-名称:值; /* Safari and Chrome */
+-o-名称:值; /* Opera */

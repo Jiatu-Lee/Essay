@@ -1,0 +1,10 @@
+1. CSS3 圆角边框
+border-radius: 左上角 右上角 右下角 左下角;（若值相同则可只写一个值）
+2. CSS3 边框阴影
+box-shadow:向左偏移 向右偏移 阴影程度 阴影颜色;
+3. CSS3 边框图片
+border-image：url(图片的引用) x方向程度 y方向程度 方式;
+
+border-image 设置所有 border-image-* 属性的简写属性。
+border-radius 设置所有四个 border-*-radius 属性的简写属性。
+box-shadow 向方框添加一个或多个阴影。 

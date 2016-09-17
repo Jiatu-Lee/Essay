@@ -1,0 +1,12 @@
+1. background-size 
+这个属性规定了背景图片的尺寸，能够以像素或百分比规定尺寸。如果以百分比规定尺寸，那么尺寸相对于父元素的宽度和高度。
+2. background-origin 
+这个属性规定了背景图片的定位区域。
+它的值可以是content-box、padding-box 或 border-box 区域。
+
+background-image的值可以有多个，不同的值以逗号隔开。
+background-image:url(引用1),url(引用2),...;
+
+background-clip 规定背景的绘制区域。
+background-origin 规定背景图片的定位区域。
+background-size 规定背景图片的尺寸。 

@@ -1,0 +1,13 @@
+@font-face
+{
+font-family: myFirstFont;
+src: url('../example/css3/Sansation_Bold.ttf')
+    ,url('../example/css3/Sansation_Bold.eot'); /* IE9+ */
+font-weight:bold;
+}
+
+div
+{
+font-family:myFirstFont;
+}
+</style>
