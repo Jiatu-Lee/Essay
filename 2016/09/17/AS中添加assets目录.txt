@@ -1,0 +1,4 @@
+Project视图：
+    XXX\src\main\assets
+	
+XXX代表你的项目的路径，assets放在src\main目录下。

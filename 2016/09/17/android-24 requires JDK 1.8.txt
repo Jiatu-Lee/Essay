@@ -1,0 +1,17 @@
+今天AS报错：
+Error:Execution failed for task ':app:compileDebugJavaWithJavac'.> compileSdkVersion 'android-24' requires JDK 1.8 or later to compile.
+需要统一版本号。
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        targetSdkVersion 23
+        
+    }
+		}
+		
+ dependencies {
+
+    compile 'com.android.support:recyclerview-v7:23.1.1'    
+
+   }
