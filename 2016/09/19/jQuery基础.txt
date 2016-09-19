@@ -1,0 +1,34 @@
+$(selector).action()
+
+美元符号定义 jQuery 
+选择符（selector）"查询"和"查找" HTML 元素 
+jQuery 的 action() 执行对元素的操作 
+
+例：
+$(this).hide() - 隐藏当前元素
+$("p").hide() - 隐藏所有段落
+$(".test").hide() - 隐藏所有 class="test" 的所有元素
+$("#test").hide() - 隐藏所有 id="test" 的元素
+jQuery 使用的语法是 XPath 与 CSS 选择器语法的组合。
+
+jQuery 元素选择器：
+
+jQuery 使用 CSS 选择器来选取 HTML 元素。
+$("p") 选取 <p> 元素。
+$("p.intro") 选取所有 class="intro" 的 <p> 元素。
+$("p#demo") 选取所有 id="demo" 的 <p> 元素。
+
+jQuery 属性选择器：
+
+jQuery 使用 XPath 表达式来选择带有给定属性的元素。
+$("[href]") 选取所有带有 href 属性的元素。
+$("[href='#']") 选取所有带有 href 值等于 "#" 的元素。
+$("[href!='#']") 选取所有带有 href 值不等于 "#" 的元素。
+$("[href$='.jpg']") 选取所有 href 值以 ".jpg" 结尾的元素。
+
+jQuery CSS 选择器：
+
+jQuery CSS 选择器可用于改变 HTML 元素的 CSS 属性。
+下面的例子把所有 p 元素的背景颜色更改为红色：
+例：
+$("p").css("background-color","red");
