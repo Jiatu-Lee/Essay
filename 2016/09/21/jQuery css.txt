@@ -1,0 +1,13 @@
+addClass() - 向被选元素添加一个或多个类 
+removeClass() - 从被选元素删除一个或多个类 
+toggleClass() - 对被选元素进行添加/删除类的切换操作 
+css() - 设置或返回样式属性 
+
+返回指定的 CSS 属性的值：
+css("propertyname");
+
+设置指定的 CSS 属性：
+css("propertyname","value");
+
+设置多个 CSS 属性：
+css({"propertyname":"value","propertyname":"value",...});

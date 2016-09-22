@@ -1,0 +1,25 @@
+添加新的 HTML 内容
+append() - 在被选元素的结尾插入内容 
+prepend() - 在被选元素的开头插入内容 
+after() - 在被选元素之后插入内容 
+before() - 在被选元素之前插入内容 
+
+添加若干新元素
+function appendText()
+{
+var txt1="<p>Text.</p>";               // 以 HTML 创建新元素
+var txt2=$("<p></p>").text("Text.");   // 以 jQuery 创建新元素
+var txt3=document.createElement("p");  // 以 DOM 创建新元素
+txt3.innerHTML="Text.";
+$("p").append(txt1,txt2,txt3);         // 追加新元素
+}
+append()与after()的区别：
+<p>This is a paragraph.</p>
+
+$("p").append("Some appended text.");
+<p>This is a paragraph.[append()]</p>
+
+$("p").after("Some after text.");
+<p>This is a paragraph.</p>[after()]
+
+prepend()与before()与上面类似。
