@@ -1,0 +1,11 @@
+E4X 是对 JavaScript 的新扩展。E4X 向 JavaScript 添加了对 XML 的直接支持。E4X 是正式的 JavaScript 标准。
+
+JavaScript = ECMAScript
+ECMAScript 是对 JavaScript 的正式的命名。
+ECMAScript 等同于 JavaScript。
+ECMA（欧洲计算机工业协会）是 JavaScript 的标准化组织。
+
+E4X = JavaScript for XML
+E4X 意为“支持 XML 的 ECMAScript”（ECMAScript For XML）。它是对 ECMAScript 的标准扩展。因此，在现实生活中，E4X意味着“支持XML的JavaScript”（JavaScript for XML）。
+
+不过，目前没有一款主流的浏览器支持 E4X。

@@ -1,0 +1,25 @@
+WMLScript 是用于 WML 页面的脚本语言。WML 页面可以在 WAP 浏览器中显示。WMLScript 用于验证用户输入、生成对话框、显示出错消息以及访问用户代理设备等等。
+
+什么是 WML？
+WML 指无线标记语言。它是一种从 HTML 继承而来的标记语言，但是 WML 基于 XML，因此它较 HTML 更严格。
+WML 是可用于显示在 WAP 浏览器中的页面。使用 WML 编写的页面被称为 DECKS。DECKS 是作为一套 CARDS 被构造的。
+
+什么是 WMLScript？
+WMLScript 是在 WML 页面中使用的脚本语言 
+WMLScript 是一种轻量级的 JavaScript 语言 
+WML 脚本并不嵌在 WML 页面中，WML 页面仅仅包含对脚本 URL 的引用。 
+WML 脚本在 WAP 浏览器运行之前，需要先在服务器上编译为字节编码 
+WML 是 WAP 规范的一部分 
+
+WMLScript 可用来做什么？
+WMLScript 可用于验证用户输入 
+WMLScript 可用于在本地生成消息框和对话框 
+WMLScript 可用于访问用户代理设备 
+
+WMLScript库：
+WMLScript Dialogs 库 
+WMLScript Float 库 
+WMLScript Lang 库 
+WMLScript String 库 
+WMLScript URL 库 
+WMLScript WMLBrowser 库 

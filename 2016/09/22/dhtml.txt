@@ -1,0 +1,28 @@
+DHTML 是一种使 HTML 页面具有动态特性的艺术。
+DHTML 是一种创建动态和交互 WEB 站点的技术集。
+对大多数人来说，DHTML 意味着 HTML、样式表和 JavaScript 的组合。
+
+DHTML 指动态 HTML（Dynamic HTML）。DHTML 不是由万维网联盟（W3C）规定的标准。
+W3C 曾讲过：“动态HTML是一个被某些厂商用来描述可使文档动态性更强的HTML、样式表以及脚本的结合物的术语。”
+
+HTML 4.0 
+事件句柄	事件 当...时发生 
+onabort 	用户终止页面加载。 
+onblur 		用户离开对象。 
+onchange 	用户改变对象的值。 
+onclick 	用户点击对象。 
+ondblclick  用户双击对象。 
+onfocus 	用户激活对象。 
+onkeydown	按下键盘。 
+onkeypress	按压键盘。 
+onkeyup 	松开键盘。 
+onload 		页面完成加载。
+onmousedown 用户按鼠标按钮。 
+onmousemove 鼠标指针在对象上移动。 
+onmouseover	鼠标指针移动到对象上。 
+onmouseout  鼠标指针移出对象。 
+onmouseup 	用户释放鼠标按钮。 
+onreset 	用户重置表单。 
+onselect 	用户选取页面上的内容。 
+onsubmit 	用户提交表单。 
+onunload 	用户关闭页面。 
