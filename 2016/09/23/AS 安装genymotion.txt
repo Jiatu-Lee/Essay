@@ -1,0 +1,2 @@
+File->Settings->Plugins->Browse repositories...->搜索"Genymotion"->Install
+等待，安装完成后，重启AS，图标会出现，点击打开，第一次需要配置genymotion的安装路径。
