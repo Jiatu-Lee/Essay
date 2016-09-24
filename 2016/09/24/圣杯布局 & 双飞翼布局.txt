@@ -1,0 +1,11 @@
+[圣杯布局]
+middle部分首先要放在container的最前部分。然后是left,right。给三者都加上 float:left , 再加上一个position:relative。middle部分 width:100%占满。此时middle占满了，
+所以要把left拉回到最左边，使用margin-left:-100%，left拉回来之后会覆盖middle内容的左端，要把middle内容拉出来，所以在外围container加上 padding:0 220px 0 200px，
+middle内容拉回来了，但left也跟着过来了，所以要还原，对left使用相对定位 left:-200px。同理，right也要相对定位还原 right:-220px，要想使container高度保持一致可以
+给left middle right都加上min-height:130px，为了保证窗口不能缩太小无法展示左右，可以给body加上 min-width。
+[双飞翼布局]
+双飞翼布局始于淘宝UED,如果把三栏布局比作一只大鸟，可以把main看成是鸟的身体，sub和extra则是鸟的翅膀。这个布局的实现思路是，先把最重要的身体部分放好，然后再将翅膀
+移动到适当的地方。
+左翅sub有200px,右翅extra也有220px.. 身体main自适应未知
+main要放最前边，然后是sub  extra，将main  sub  extra 都float:left，将main占满 width:100%。此时main占满了，所以要把sub拉到最左边，使用margin-left:-100%  
+同理 extra使用margin-left:-220px，此时main内容被覆盖了（处理同圣杯布局），给main增加一个内层div-- main-inner, 然后margin:0 220px 0 200px。
