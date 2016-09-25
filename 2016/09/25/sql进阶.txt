@@ -1,0 +1,75 @@
+1. TOP 子句
+TOP 子句用于规定要返回的记录的数目。并非所有的数据库系统都支持 TOP 子句。
+
+选取头两条记录:
+SELECT TOP 2 * FROM TABNAME
+
+选取 50% 的记录:
+SELECT TOP 50 PERCENT * FROM TABNAME
+
+2. LIKE
+LIKE操作符用于在 WHERE 子句中搜索列中的指定模式。
+
+选取居住在以 "N" 开始的城市里的人：
+SELECT * FROM TABNAME WHERE City LIKE 'N%'
+"%" 可用于定义通配符（模式中缺少的字母）。
+
+选取居住在以 "g" 结尾的城市里的人：
+SELECT * FROM TABNAME WHERE City LIKE '%g'
+
+选取居住在包含 "lon" 的城市里的人：
+SELECT * FROM TABNAME WHERE City LIKE '%lon%'
+
+选取居住在不包含 "lon" 的城市里的人：
+SELECT * FROM TABNAME WHERE City NOT LIKE '%lon%'
+
+3. 通配符
+通配符可以替代一个或多个字符。SQL 通配符必须与 LIKE 运算符一起使用。
+% 	替代一个或多个字符 
+_ 	仅替代一个字符 
+[charlist] 	字符列中的任何单一字符 
+[^charlist]/ [!charlist] 	不在字符列中的任何单一字符
+ 
+4. IN 操作符
+IN 操作符允许我们在 WHERE 子句中规定多个值。
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1,value2,...)
+
+5. BETWEEN 操作符
+操作符 BETWEEN ... AND 会选取介于两个值之间的数据范围。
+SELECT column_name(s)
+FROM table_name
+WHERE column_name
+BETWEEN value1 AND value2
+
+同的数据库对 BETWEEN...AND 操作符的处理方式是有差异的。某些数据库会列出介于 "Adams" 和 "Carter" 之间的人，但不包括 "Adams" 和 "Carter" ；
+某些数据库会列出介于 "Adams" 和 "Carter" 之间并包括 "Adams" 和 "Carter" 的人；而另一些数据库会列出介于 "Adams" 和 "Carter" 之间的人，包括 "Adams" ，
+但不包括 "Carter" 。
+如需使用显示范围之外的人，使用 NOT 操作符：
+SELECT column_name(s)
+FROM table_name
+WHERE column_name
+NOT BETWEEN value1 AND value2
+
+6. Alias
+为列名称和表名称指定别名。
+
+表的 SQL Alias 语法
+SELECT column_name(s)
+FROM table_name
+AS alias_name
+
+列的 SQL Alias 语法
+SELECT column_name AS alias_name
+FROM table_name
+
+7. join
+数据库中的表可通过键将彼此联系起来。主键（Primary Key）是一个列，在这个列中的每一行的值都是唯一的。在表中，每个主键的值都是唯一的。这样做的目的是在不重复
+每个表中的所有数据的情况下，把表间的数据交叉捆绑在一起。
+
+JOIN: 如果表中有至少一个匹配，则返回行 
+INNER JOIN：内连接，在表中存在至少一个匹配时返回行
+LEFT JOIN: 即使右表中没有匹配，也从左表返回所有的行 
+RIGHT JOIN: 即使左表中没有匹配，也从右表返回所有的行 
+FULL JOIN: 只要其中一个表中存在匹配，就返回行

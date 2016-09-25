@@ -1,0 +1,9 @@
+只要其中某个表存在匹配，FULL JOIN 关键字就会返回行。
+FULL JOIN 关键字语法
+
+SELECT column_name(s)
+FROM table_name1
+FULL JOIN table_name2 
+ON table_name1.column_name=table_name2.column_name
+
+在某些数据库中， FULL JOIN 称为 FULL OUTER JOIN。

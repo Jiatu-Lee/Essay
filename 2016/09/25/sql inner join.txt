@@ -1,0 +1,10 @@
+在表中存在至少一个匹配时，INNER JOIN 关键字返回行。
+INNER JOIN 关键字语法
+
+SELECT column_name(s)
+FROM table_name1
+INNER JOIN table_name2 
+ON table_name1.column_name=table_name2.column_name
+
+INNER JOIN 与 JOIN 是相同的。
+INNER JOIN 关键字在表中存在至少一个匹配时返回行。如果 "table_name1" 中的行在 "table_name2" 中没有匹配，就不会列出这些行。
