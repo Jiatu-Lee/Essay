@@ -1,0 +1,14 @@
+1. 修改host文件
+C:\Windows\System32\drivers\etc其中的HOST文件中添加以下内容：
+mirrors.dormforce.net dl-ssl.google.com
+mirrors.dormforce.net dl.google.com
+
+2. 添加自定义更新
+http://mirrors.dormforce.net/android/repository/addon.xml
+http://mirrors.dormforce.net/android/repository/addon-6.xml
+http://mirrors.dormforce.net/android/repository/extras/intel/addon.xml
+http://mirrors.dormforce.net/android/repository/sys-img/android-tv/sys-img.xml
+http://mirrors.dormforce.net/android/repository/sys-img/android-wear/sys-img.xml
+http://mirrors.dormforce.net/android/repository/sys-img/android/sys-img.xml
+http://mirrors.dormforce.net/android/repository/sys-img/google_apis/sys-img.xml
+http://mirrors.dormforce.net/android/repository/sys-img/x86/addon-x86.xml
