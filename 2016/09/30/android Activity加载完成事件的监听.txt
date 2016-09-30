@@ -1,0 +1,7 @@
+ @Override  
+    public void onWindowFocusChanged(boolean hasFocus)  
+    {  
+        if (hasFocus)  
+        {  
+        }  
+    } 
