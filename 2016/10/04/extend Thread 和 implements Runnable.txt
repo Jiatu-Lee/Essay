@@ -1,0 +1,95 @@
+一个Thread的实例只能产生一个线程
+or:
+同一实例(Runnable实例)的多个线程
+look:
+
+public class Test {
+　public static void main(String[] args) throws Exception{
+　　MyThread mt = new MyThread();
+　　mt.start();
+　　mt.join();
+　　Thread.sleep(3000);
+　　mt.start();
+　}
+}
+　　当线程对象mt运行完成后，我们让主线程休息一下，然后我们再次在这个线程对象上启动线程。结果我们看到:
+
+　　Exception in thread "main" java.lang.IllegalThreadStateException
+
+　　也就是这种线程对象一时运行一次完成后，它就再也不能运行第二次了。我们可以看一下它有具体实现:
+
+public synchronized void start() {
+　if (started)
+　　throw new IllegalThreadStateException();
+　　started = true;
+　　group.add(this);
+　　start0();
+　}
+　　一个Thread的实例一旦调用start()方法，这个实例的started标记就标记为true，事实中不管这个线程后来有没有执行到底，只要调用了一次start()就再也没有机会运行了，这意味着:
+
+　　[通过Thread实例的start()，一个Thread的实例只能产生一个线程]
+
+　　那么如果要在一个实例上产生多个线程(也就是我们常说的线程池)，我们应该如何做呢?这就是Runnable接口给我们带来的伟大的功能。
+
+class R implements Runnable{
+　private int x = 0;
+　public void run(){
+　　for(int i=0;i<100;i++){
+　 　　try{
+　　 　　Thread.sleep(10);
+　 　　}catch(Exception e){}
+　 　　System.out.println(x++);
+　　}
+　}
+}
+　　正如它的名字一样，Runnable的实例是可运行的，但它自己并不能直接运行，它需要被Thread对象来包装才行运行:
+
+public class Test {
+　public static void main(String[] args) throws Exception{
+　　new Thread(new R()).start();
+　}
+}
+　　当然这个结果和mt.start()没有什么区别。但如果我们把一个Runnable实例给Thread对象多次包装，我们就可以看到它们实际是在同一实例上启动线程:
+
+public class Test {
+　public static void main(String[] args) throws Exception{
+　　R r = new R();
+　　for(int i=0;i<10;i++)
+　 　　new Thread(r).start();
+　}
+}
+　　x是实例对象，但结果是x被加到了999，说明这10个线程是在同一个r对象上运行的。请大家注意，因为这个例子是在单CPU上运行的，所以没有对多个线程同时操作共同的对象进行同步。这里是为了说明的方便而简化了同步，而真正的环境中你无法预知程序会在什么环境下运行，所以一定要考虑同步。
+
+　　到这里我们做一个完整的例子来说明线程产生的方式不同而生成的线程的区别:
+
+package debug;
+import java.io.*;
+import java.lang.Thread;
+class MyThread extends Thread{
+　public int x = 0;
+　public void run(){
+　　System.out.println(++x);
+　}
+}
+
+class R implements Runnable{
+　private int x = 0;
+　public void run(){
+　　System.out.println(++x);
+　}
+}
+public class Test {
+　public static void main(String[] args) throws Exception{
+　　for(int i=0;i<10;i++){
+　 　　Thread t = new MyThread();
+　 　　t.start();
+　　}
+　　Thread.sleep(10000);//让上面的线程运行完成
+　　R r = new R();
+　　for(int i=0;i<10;i++){
+　 　　Thread t = new Thread(r);
+　 　　t.start();
+　　}
+　}　　
+}
+　　上面10个线程对象产生的10个线程运行时打印了10次1。下面10个线程对象产生的10个线程运行时打印了1到10。我们把下面的10个线程称为同一实例(Runnable实例)的多个线程。
