@@ -1,0 +1,4 @@
+在jQuery中，有几种方式可以判断一个对象是否是数字，或者可否转换为数字。
+首先，jQuery.isNaN()在最新版本中已经被移除了（1.7之后），取而代之的是  jQuery.isNumeric ()。这并不奇怪，因为jQuery.isNaN() 同Javascript内置的isNaN()名字相同，但是语义却不完全相同，在一定意义上会造成歧义。 jQuery.isNumeric ()有着与其相似的功能，同时也解决了歧义问题。
+
+jQuery.isNumeric ()检查传进的参数是否是数字或者可否转换为数字；Javascript 内置的isNaN() 检查传进的参数是否是一个合法的数字
