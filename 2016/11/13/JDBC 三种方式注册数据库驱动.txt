@@ -1,0 +1,7 @@
+使用JDBC的时候，有三种方法可以完成注册驱动的操作。
+1. DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+使用这种方式注册不同的驱动，需要new不同的驱动类。具体的类名需要查看该数据库文档的连接部分。
+2. System.setProperty(“jdbc.drivers“,”com.mysql.jdbc.Driver“);
+通过设置系统属性的方式也可以注册驱动。蓝色部分是固定值，红色部分和第一种一样，也要根据数据库的不同，提供不同的值。这个方式也可以一次注册多个驱动，仅仅需要通过：(冒号)来分隔驱动名称就可以。
+3. Class.forName(“com.mysql.jdbc.Driver“);
+第三种也是在JDBC的使用中最常用的反射方式注册。实际上，这个也是JDBC在后台自动执行了第一种注册方式。但是反射注册的时候有可能会抛出ClassNotFoundException异常，需要手动处理。 
